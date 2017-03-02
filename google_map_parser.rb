@@ -7,8 +7,7 @@ require 'google_places'
 
 
 module GooglePlaces
-	GOOGLE_API_KEY = 'AIzaSyBDpQ2kUxng4YXcSh1yPqH8MI4C4ipRNNM'
-	GOOGLE_API_KEY2 =  'AIzaSyD9h_Zdt7XuEQ7vIm1TtOpPlAlFrC1Bc_s'
+	GOOGLE_API_KEY2 =  '***'
 	class PlaceShow
 		def self.query_for_url query
 			query.sub(' ', '+')
