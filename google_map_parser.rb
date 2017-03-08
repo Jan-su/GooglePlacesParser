@@ -9,10 +9,10 @@ require "sinatra"
 
 module GooglePlaces
 	GOOGLE_API_KEY = '***'
-	GOOGLE_API_KEY2 =  "***"
+	GOOGLE_API_KEY2 =  "AIzaSyArlh_QEyc744eZ_QF3ny0IkHTuVbn2wdQ"
 	class PlaceShow
 		def initialize query
-			@file_name ="axlsx.xlsx"
+			@file_name ="output/axlsx.xlsx"
 			@get_list_places_url = lambda  do |query, page_token| 
 				has_next_page = '&hasNextPage=true&nextPage()=true&sensor=false&'
 				main_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
