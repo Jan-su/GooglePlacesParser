@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<div id="form">
+			<p>Ваш запрос к гуглу: <input type="text" id="query" name="query"></p>
+		</div>
+		<div>
+			<button onclick="create_excel()">Запрос</button>
+		</div>
+		<div id="elm-place">
+			<div> Жду команд!</div>
+			<img src="http://ribalych.ru/wp-content/uploads/2014/07/55019.jpg" style="height: 350px; width: 400px">
+		</div>
+	</body>
+	
+	<script type="application/javascript"  src="/parser.js"></script>
+	<script>
+		var create_excel = function(){
+			var query = document.getElementById('query').value
+			var node = document.getElementById('elm-place')
+			var flag = {query: query}
+			alert("GO!")
+			var app = Elm.Parser.embed(node, flag)
+		}
+	</script>
+</html>
