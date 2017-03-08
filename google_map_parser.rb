@@ -5,6 +5,7 @@ require 'json'
 require 'axlsx'
 require "sinatra"
 require "sinatra"
+require 'sinatra/base'
 
 
 module GooglePlaces
@@ -107,16 +108,17 @@ def excel_of query
 	excel = GooglePlaces::PlaceShow.new query
 end
 
-get "/" do
-	erb :google_map_parser
-end
+class MyApp < Sinatra::Base
+	get "/" do
+		erb :google_map_parser
+	end
 
-post "/send_to_server/" do
-	content_type :json
-	request.body.rewind  # in case someone already read it
-	data = JSON.parse request.body.read
-	a = excel_of data['query']
-	('kek').to_json if a.path_name
+	post "/send_to_server/" do
+		content_type :json
+		request.body.rewind  # in case someone already read it
+		data = JSON.parse request.body.read
+		a = excel_of data['query']
+		('kek').to_json if a.path_name
+	end
 end
-
 

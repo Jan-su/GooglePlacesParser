@@ -1,2 +1,2 @@
 require './google_map_parser'
-run Sinatra::Application
+run MyApp.new
