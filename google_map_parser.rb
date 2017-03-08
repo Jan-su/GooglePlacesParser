@@ -9,7 +9,7 @@ require "sinatra"
 
 module GooglePlaces
 	GOOGLE_API_KEY = '***'
-	GOOGLE_API_KEY2 =  "AIzaSyCsGzUGnAPDym_bpao6QAzIVqmYf6fTRPw"
+	GOOGLE_API_KEY2 =  "***"
 	class PlaceShow
 		def initialize query
 			@file_name ="axlsx.xlsx"
