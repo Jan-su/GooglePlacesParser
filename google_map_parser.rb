@@ -41,11 +41,10 @@ module GooglePlaces
 		def take_place_info place_hash
 			result = place_hash['result'] 
 			{
-				'Источник'=>'',
+				'Источник'=>'',  # Should be either filled or deleted. I vote for the second.
 				'Название' => result['name'],
 				'Адрес'=>     result['formatted_address'],
 				'Сайт'=>      result['website'], 
-				'E-mail'=>    '',
 				'Телефон'=>   result['formatted_phone_number']
 			}
 		end
